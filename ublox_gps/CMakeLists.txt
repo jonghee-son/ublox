@@ -16,11 +16,6 @@ catkin_package(
     LIBRARIES ${PROJECT_NAME}
     CATKIN_DEPENDS tf roscpp ublox_msgs ublox_serialization rtcm_msgs nmea_msgs)
 
-# include boost
-find_package(Boost REQUIRED COMPONENTS system regex thread)
-link_directories(${Boost_LIBRARY_DIR})
-include_directories(${Boost_INCLUDE_DIR})
-
 # include other ublox packages
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${catkin_INCLUDE_DIRS})
